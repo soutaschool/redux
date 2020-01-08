@@ -6,8 +6,16 @@ import ReactDOM from 'react-dom';
 
 // const App = function() {
 // アロー関数の場合の例
+
+// JSXでのcssは{{}}にする
     const App = () => {
-    return <div>Hi there!</div>;
+    return (
+        <div>
+            <label class="label">Enter name</label>
+            <input id = "name" type="text" />
+            <button style="background-color: blue; color: white;">submit</button>
+        </div>
+    )
 };
 
 // スクリーンに表示する
