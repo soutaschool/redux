@@ -5,10 +5,13 @@ import faker from 'faker';
 import CommentDetail from './CommentDetail';
 
 
+// コンポーネントの名前を変えていく
 const App = () => {
     return (
         <div className="ui container comments">
-        <CommentDetail />
+        <CommentDetail author="sam" />
+        <CommentDetail author="Alex" />
+        <CommentDetail author="Jane" />
         </div>
     )
 };
