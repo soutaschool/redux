@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 
 const CommentDetail = () => {
@@ -19,3 +20,6 @@ const CommentDetail = () => {
             </div>
     )
 }
+
+// 他の部分でCommentDetailを使用できるようにする
+export default CommentDetail;
