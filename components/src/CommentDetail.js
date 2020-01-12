@@ -1,5 +1,4 @@
 import React from 'react';
-import faker from 'faker';
 
 // props.authorを使用することによりそれぞれの人の名前を表示している
 // propsが関係している

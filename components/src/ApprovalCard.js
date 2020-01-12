@@ -18,3 +18,6 @@ const ApprovalCard = (props) => {
 };
 
 export default ApprovalCard;
+
+// https://qiita.com/yuta-ushijima/items/e611fcb7bb4d50ff42ea
+// 参考にしたサイト（素晴らしい）
