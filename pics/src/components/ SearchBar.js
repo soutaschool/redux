@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
     
 
 
-
+// ここの部分で文字の変換も行う
     render() {
         return (
             <div className="ui segment">
@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
                         <input
                             type="text"
                             value={this.state.term}
-                            onChange={(e) => this.setState({ term: e.target.value })}
+                            onChange={e => this.setState({ term: e.target.value })}
                             />
                     </div>
                 </form>
