@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-
+// 軽度の確認をしたい
 const App = () => {
     window.navigator.geolocation.getCurrentPosition(
         (position) => console.log(position),
@@ -10,7 +10,7 @@ const App = () => {
     );
 
 
-    return <div>Hi herete</div>;
+    return <div>Latitude: </div>;
 };
 
 ReactDOM.render(
