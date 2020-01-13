@@ -1,9 +1,23 @@
 import React from 'react';
 
+function HelperFunction() {
+
+
+
+}
+
+function HelperFunction() {
+
+
+    
+}
+
+
+
+
 // props.authorを使用することによりそれぞれの人の名前を表示している
 // propsが関係している
 const CommentDetail = props => {
-    console.log(props);
     return (
             <div className="comment">
                 <a href="/" className="avatar">
