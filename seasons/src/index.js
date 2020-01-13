@@ -23,7 +23,16 @@ class App extends React.Component {
             }
         );
         
-    };
+    }
+
+    // 最初のスクリーンに作画される時に自動的に呼び出される
+    componentDidMount() {
+        console.log('My component was rederred tothe screen');
+    }
+
+    componentDidUpdate() {
+        console.log('My component was just updated - it re');
+    }
 
 
         // メッセージを表示することに必要なのは{}
@@ -36,7 +45,7 @@ class App extends React.Component {
                 return <div>Latitude: {this.state.lat}</div>
             }
 
-            return <div>Loading!</div>;
+            return <div>Loading:</div>;
     }
 }
 
