@@ -4,12 +4,12 @@ import ReactDOM from 'react-dom';
 
 
 
-// コンストラクターでメソッドを作っている
+// 問題があればエラーメッセージを表示する
 class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { lat: 40 };
+        this.state = { lat: null, errorMessage: '' };
     }
 
     render() {
@@ -18,10 +18,19 @@ class App extends React.Component {
                 // ここでsetStateを使用する
                 this.setState({ lat: position.coords.latitude });
             },
-            (err) => console.log(err)
+            (err) => {
+                this.setState({ errorMessage: err.message })
+            }
         );
 
-        return <div>Latitude: {this.state.lat}</div>;
+        return (<div>
+        Latitude: {this.state.lat}
+        <br />
+        Error: {this.state.errorMessage}
+        </div>
+        );
+
+        
     }
 }
 
