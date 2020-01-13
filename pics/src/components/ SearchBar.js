@@ -5,9 +5,7 @@ import React from 'react';
 // 内部拡張をしていく
 // フォームを作成していく
 class SearchBar extends React.Component {
-    onInputChange(event) {
-        console.log(event.target.value);
-    }
+    state = { term: ''};
 
     
 
@@ -19,7 +17,11 @@ class SearchBar extends React.Component {
                 <form className="ui form">
                     <div className="field">
                         <label>Image Search</label>
-                        <input type="text"  onChange={this.onInputChange} />
+                        <input
+                            type="text"
+                            value={this.state.term}
+                            onChange={(e) => this.setState({ term: e.target.value })}
+                            />
                     </div>
                 </form>
             </div>
