@@ -7,15 +7,21 @@ import React from 'react';
 class SearchBar extends React.Component {
     state = { term: ''};
 
+    // 初期を設定するものになる
+    onFormSubmit(event) {
+        event.preventDefault();
+
+        console.log(this,this.state.term);
+    }
+
     
 
 
-// ここの部分で文字の変換も行う
-// ここの部分で作成をしていく
+// 初期の動きを無効にしたい
     render() {
         return (
             <div className="ui segment">
-                <form className="ui form">
+                <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <label>Image Search</label>
                         <input
