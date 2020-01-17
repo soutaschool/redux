@@ -7,8 +7,8 @@ import React from 'react';
 class SearchBar extends React.Component {
     state = { term: ''};
 
-    // この場合未定義の状態となっている
-    onFormSubmit(event) {
+    // eventというメソッドを作成する
+    onFormSubmit = event => {
         event.preventDefault();
 
         console.log(this.state.term);
@@ -18,10 +18,11 @@ class SearchBar extends React.Component {
 
 
 // 初期の動きを無効にしたい
+// form部分のもので簡潔に実装することができるようになる
     render() {
         return (
             <div className="ui segment">
-                <form onSubmit={this.onFormSubmit} className="ui form">
+                <form onSubmit={event => this.onFormSubmit(event)} className="ui form">
                     <div className="field">
                         <label>Image Search</label>
                         <input
