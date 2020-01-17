@@ -11,6 +11,7 @@ class SearchBar extends React.Component {
 
 
 // ここの部分で文字の変換も行う
+// ここの部分で作成をしていく
     render() {
         return (
             <div className="ui segment">
