@@ -7,11 +7,11 @@ import React from 'react';
 class SearchBar extends React.Component {
     state = { term: ''};
 
-    // 初期を設定するものになる
+    // この場合未定義の状態となっている
     onFormSubmit(event) {
         event.preventDefault();
 
-        console.log(this,this.state.term);
+        console.log(this.state.term);
     }
 
     
