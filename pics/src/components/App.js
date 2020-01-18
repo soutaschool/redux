@@ -1,4 +1,6 @@
 import React from 'react';
+// axiosを追加する
+import axios from 'axios';
 import SearchBar from './ SearchBar';
 
 
