@@ -8,12 +8,12 @@ import SearchBar from './ SearchBar';
 class App extends React.Component {
     state = { images: [] };
 
-
-    async onSearchSubmit(term) {
+// 非同期処理をアロー関数を用いて含めてしまう必要がある
+    onSearchSubmit = async (term) => {
         const response = await axios.get('https://api.unsplash.com/search/photos', {
         params: { query: term },
         headers: {
-            Authorization: 'sasaki 32a4479d04cf66b7ab32527b9c932ba9459360b4fa82eb294fa2e8409d0be137'
+            Authorization: 'sasaki souta 32a4479d04cf66b7ab32527b9c932ba9459360b4fa82eb294fa2e8409d0be137'
         }
         });
 
